@@ -15,7 +15,8 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  color: #777; }
+  color: #777;
+  padding: 2rem; }
 
 .heading-primary {
   color: #fff;
@@ -35,6 +36,20 @@ body {
     font-size: 2rem;
     letter-spacing: 1.7rem;
     animation: moveInRight 1s ease-out; }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #7ed56f, #28b485);
+  display: inline-block;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s; }
+  .heading-secondary:hover {
+    transform: skewY(2deg) skewX(20deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 @keyframes moveInLeft {
   0% {
@@ -63,6 +78,17 @@ body {
   100% {
     transform: translateY(0);
     opacity: 1; } }
+
+.u-text-center {
+  text-align: center; }
+
+.u-margin-bottom-8 {
+  margin-bottom: 8rem; }
+
+.section-about {
+  padding: 25rem;
+  margin-top: -20vh;
+  background-color: #f7f7f7; }
 
 .btn--white {
   background-color: #fff; }
@@ -108,7 +134,6 @@ body {
 
 .row {
   max-width: 114rem;
-  background-color: #eee;
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
@@ -117,7 +142,6 @@ body {
     display: table;
     clear: both; }
   .row [class^="col-"] {
-    background-color: red;
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
