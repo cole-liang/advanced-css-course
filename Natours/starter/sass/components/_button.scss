@@ -17,6 +17,7 @@
     }
   }
 
+  &,
   &:link,
   &:visited {
     padding: 1.5rem 4rem;
@@ -28,6 +29,10 @@
 
     transition: all 0.2s;
     position: relative;
+
+    //Changes for button
+    cursor: pointer;
+    border: none;
   }
 
   &:hover {
@@ -43,6 +48,9 @@
   &:active {
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+
+    //For button
+    outline: none;
   }
 
   &::after {
