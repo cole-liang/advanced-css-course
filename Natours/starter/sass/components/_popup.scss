@@ -6,6 +6,35 @@
   left: 0;
   background-color: rgba($color-grey-dark-3, 0.9);
   z-index: 2500;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:target &__content {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  &__close {
+    &:link,
+    &:visited {
+      position: absolute;
+      top: 2.5rem;
+      right: 2.5rem;
+      text-decoration: none;
+      font-size: 3rem;
+      line-height: 1;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-primary;
+    }
+  }
 
   &__content {
     @include absCenter;
@@ -15,6 +44,8 @@
     box-shadow: 0 1rem 3rem rgba($color-black, 0.8);
     border-radius: $border-radius-small;
     overflow: hidden;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.5s 0.2s;
   }
 
   &__img {
